@@ -19,6 +19,6 @@ for url in p.video_urls[a:b]:
 	video = YouTube(url)
 	print(f'Downloading: {video.title}')
 	video_streams = video.streams.filter(file_extension='mp4').get_by_itag(22)
-	video_streams.download()
+	video_streams.download(output_path = p.title)
 
 print("ALL DONE")
